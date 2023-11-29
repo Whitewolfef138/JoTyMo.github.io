@@ -2,6 +2,9 @@
 
 Welcome to the JoTyMo.github.io wiki!
 
+<img width="494" alt="github" src="https://github.com/Whitewolfef138/JoTyMo.github.io/assets/80634197/9f68432a-616f-4df9-94f9-c846767219b3">
+
+
 This is a brief introduction on how to work with JoTyMo.
 
 You need to first preprocess the images. You can take these images either from the Sapiens PartNet-Mobility dataset or you can ask TaarLab to share the images with you.
