@@ -38,5 +38,32 @@ specific type of joint, understand its range of motion, and
 pinpoint the possible grasping point for effective joint manipulation
 of Articulated obejcts available in PartNet-Mobility
 dataset.
-[examples.pdf](https://github.com/Whitewolfef138/JoTyMo.github.io/files/13500773/examples.pdf)
+
+For joint type detection and classifying Articulated objects,
+two RGB images of the size 224 × 224 × 3 are resized into
+96 × 96 × 3 images. These images are then inputted into a
+convolutional layer separately, as depicted in the first half
+of Fig. 3. The resulting shape of each smaller convolutional
+layer is 21 × 21 × 96. Subsequently, these two outputs are
+concatenated to produce a 21 × 21 × 192 vector, which in
+turn is passed into another CNN for classification purposes.
+Within each convolutional layer of JoTyMo, a design inspired
+by VGG-16 was implemented. VGG based layers were chosen
+to avoid complex structures, similar to the studies conducted. Each convolutional layer involved utilization of a
+Conv2D layer, followed by a dropout layer, and then another
+Conv2D layer. Subsequently, batch normalization was applied
+for stable training, followed by max pooling. Moreover, the
+ConvD layers employ kernel sizes of 3 × 3, while the pool
+size in the MaxPooling layers is 2 × 2.
+For the purpose of this study, SoftMax is employed after the dense layers in order to achieve
+a classifier model, where probability of two images being in
+each class is estimated. Additionally, in JoTyMo, Rectified
+Linear Units (ReLU) are applied to the activation functions in
+both CNN layers and fully-connected layers. The applied loss function is the Categorical
+Cross Entropy, enabling the generation of output probabilities
+for each grouped category. To summarize, the main goal of
+the initial segment of the architecture seen in Fig. 3 consists
+of obtaining a transformation function from two input images
+to the class probability by extracting features from the input
+images.
 
