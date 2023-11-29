@@ -38,3 +38,5 @@ specific type of joint, understand its range of motion, and
 pinpoint the possible grasping point for effective joint manipulation
 of Articulated obejcts available in PartNet-Mobility
 dataset.
+[examples.pdf](https://github.com/Whitewolfef138/JoTyMo.github.io/files/13500773/examples.pdf)
+
